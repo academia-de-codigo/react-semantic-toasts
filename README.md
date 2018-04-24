@@ -1,2 +1,2 @@
-# react-semantic-alert
-React Semantic UI alerts library
+# react-semantic-toasts
+React Semantic UI notifications library
