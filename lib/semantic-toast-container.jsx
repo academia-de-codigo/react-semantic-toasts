@@ -80,7 +80,8 @@ class SemanticToastContainer extends Component {
                         type = 'info',
                         title = '',
                         description = '',
-                        icon = 'announcement'
+                        icon = 'announcement',
+                        time
                     } = toast;
                     return (
                         <SemanticToast
@@ -91,6 +92,7 @@ class SemanticToastContainer extends Component {
                             description={description}
                             icon={icon}
                             animation={animation}
+                            time={time}
                             onClose={this.onClose}
                         />
                     );
