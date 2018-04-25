@@ -2,6 +2,8 @@ import React from 'react';
 import { Transition } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
+import 'semantic-ui-css/components/transition.min.css';
+
 export default function withTransitions(Component) {
     class SemanticTransition extends React.Component {
         static propTypes = {
