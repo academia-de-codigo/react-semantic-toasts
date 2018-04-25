@@ -1,0 +1,15 @@
+{
+    "presets": ["env", "react"],
+    "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-async-to-generator",
+        [
+            "module-resolver",
+            {
+                "root": ["./lib"]
+            }
+        ]
+    ],
+    "retainLines": true
+}

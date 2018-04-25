@@ -1,0 +1,50 @@
+{
+    "name": "react-semantic-toasts",
+    "version": "0.0.1",
+    "description": "React Semantic UI alerts library",
+    "main": "build/index.js",
+    "keywords": [
+        "react",
+        "semantic",
+        "toast",
+        "alerts"
+    ],
+    "scripts": {
+        "build": "babel lib -d build",
+        "build:watch": "babel lib -w -d build",
+        "eslint": "eslint lib/**",
+        "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/academia-de-codigo/react-semantic-alert.git"
+    },
+    "author": "<Academia de Código_>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/academia-de-codigo/react-semantic-alert/issues"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.2.3",
+        "babel-plugin-module-resolver": "^3.1.1",
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.7.0"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.1",
+        "react": "^16.3.2",
+        "semantic-ui-css": "^2.3.1",
+        "semantic-ui-react": "^0.79.1"
+    }
+}
