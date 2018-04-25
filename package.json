@@ -1,9 +1,14 @@
 {
     "name": "react-semantic-toasts",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "React Semantic UI alerts library",
     "main": "build/index.js",
-    "keywords": ["react", "semantic ui", "toast", "alerts"],
+    "keywords": [
+        "react",
+        "semantic ui",
+        "toast",
+        "alerts"
+    ],
     "scripts": {
         "build": "babel lib -d build",
         "build:watch": "babel lib -w -d build",
