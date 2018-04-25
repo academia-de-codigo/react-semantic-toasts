@@ -33,6 +33,10 @@ class SemanticToastContainer extends Component {
     onClose = toastId => {
         const toast = this.state.toasts.find(value => value.id === toastId);
         store.remove(toast);
+
+        if (toast.onClose) {
+            toast.onClose();
+        }
     };
 
     updateToasts = () => {
