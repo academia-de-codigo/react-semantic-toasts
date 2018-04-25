@@ -16,7 +16,7 @@ function SemanticToast(props) {
 
     return (
         <Message
-            onClick={() => {
+            onDismiss={() => {
                 onClose(toastId);
             }}
             info={type === 'info'}

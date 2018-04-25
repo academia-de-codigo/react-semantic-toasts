@@ -18,26 +18,42 @@ export default function withTransitions(Component) {
         };
 
         static defaultProps = {
-            time: 2000
+            time: 1000
         };
 
         state = {
-            visible: true
+            visible: false,
+            time: 500,
+            animation: 'pulse'
         };
 
+        componentDidMount() {
+            // start animation as soon as toast is mounted in the dom
+            this.setState({ visible: true });
+        }
+
         onClose = toastId => {
-            this.setState({ visible: !this.state.visible });
-            setTimeout(() => this.props.onClose(toastId), this.props.time);
+            // trigger new animation when toast is dismissed
+            this.setState(
+                {
+                    visible: !this.state.visible,
+                    animation: this.props.animation,
+                    time: this.props.time
+                },
+                () => {
+                    setTimeout(() => this.props.onClose(toastId), this.props.time);
+                }
+            );
         };
 
         render() {
-            const { time, animation } = this.props;
+            const { time, visible, animation } = this.state;
             const styles = {
                 marginBottom: '1em'
             };
 
             return (
-                <Transition animation={animation} duration={time} visible={this.state.visible}>
+                <Transition animation={animation} duration={time} visible={visible}>
                     <div style={styles} role="presentation">
                         <Component {...this.props} onClose={this.onClose} />
                     </div>
