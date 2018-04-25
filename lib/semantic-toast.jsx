@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
+import withTransition from './with-transition';
 
 const icons = {
     info: 'announcement',
@@ -15,7 +16,7 @@ function SemanticToast(props) {
 
     return (
         <Message
-            onDismiss={() => {
+            onClick={() => {
                 onClose(toastId);
             }}
             info={type === 'info'}
@@ -43,4 +44,4 @@ SemanticToast.defaultProps = {
     onClose: undefined
 };
 
-export default SemanticToast;
+export default withTransition(SemanticToast);
