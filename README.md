@@ -44,7 +44,8 @@ setTimeout(() => {
         type: 'warning',
         icon: 'envelope',
         title: 'Warning Toast',
-        description: 'This is a Semantic UI toast'
+        description: 'This is a Semantic UI toast wich waits 5 seconds before closing',
+        time: 5000
     });
 }, 5000);
 ```
@@ -73,7 +74,7 @@ toast(options, cb);
 *   `description` - The content of the toast
 *   `type` - Can be one of `info`, `success`, `warning`, or `error`
 *   `icon` - Override the default icon
-*   `time` - Duration of the toast closing animation
+*   `time` - Duration to keep the toast open, 0 to wait until closed by the user
 
 ## License
 

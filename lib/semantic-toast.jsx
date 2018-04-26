@@ -15,14 +15,12 @@ const icons = {
 };
 
 function SemanticToast(props) {
-    const { type, title, description, onClose, toastId } = props;
+    const { type, title, description, onClose } = props;
     const icon = props.icon || icons[props.type];
 
     return (
         <Message
-            onDismiss={() => {
-                onClose(toastId);
-            }}
+            onDismiss={onClose}
             info={type === 'info'}
             success={type === 'success'}
             error={type === 'error'}
@@ -36,7 +34,6 @@ function SemanticToast(props) {
 }
 
 SemanticToast.propTypes = {
-    toastId: PropTypes.number.isRequired,
     type: PropTypes.oneOf(['info', 'success', 'error', 'warning']).isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
