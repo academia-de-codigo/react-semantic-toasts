@@ -65,12 +65,7 @@ class SemanticToastContainer extends Component {
 
     render() {
         const { position } = this.props;
-        const alert = ['ui', 'icon', 'floating'];
         const animation = animations[position];
-
-        if (window.innerWidth < 425) {
-            alert.push('mini');
-        }
 
         return (
             <div className={`ui-alerts ${position}`}>
