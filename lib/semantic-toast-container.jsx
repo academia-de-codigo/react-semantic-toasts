@@ -50,6 +50,12 @@ class SemanticToastContainer extends Component {
 
     onClose = toastId => {
         const toast = this.state.toasts.find(value => value.id === toastId);
+
+        // toast has been removed already, fixes #1
+        if (!toast) {
+            return;
+        }
+
         store.remove(toast);
 
         if (toast.onClose) {
