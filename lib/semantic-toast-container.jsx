@@ -29,11 +29,13 @@ class SemanticToastContainer extends Component {
             'bottom-right',
             'bottom-center',
             'bottom-left'
-        ])
+        ]),
+        animation: PropTypes.string
     };
 
     static defaultProps = {
-        position: 'top-right'
+        position: 'top-right',
+        animation: null
     };
 
     state = {
@@ -71,7 +73,7 @@ class SemanticToastContainer extends Component {
 
     render() {
         const { position } = this.props;
-        const animation = animations[position];
+        const animation = this.props.animation || animations[position];
 
         return (
             <div className={`ui-alerts ${position}`}>

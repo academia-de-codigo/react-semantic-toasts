@@ -12,14 +12,7 @@ export default function withTransitions(Component) {
         static propTypes = {
             toastId: PropTypes.number.isRequired,
             onClose: PropTypes.func.isRequired,
-            animation: PropTypes.oneOf([
-                'fly left',
-                'fly down',
-                'fly right',
-                'fly left',
-                'fly up',
-                'fly right'
-            ]).isRequired,
+            animation: PropTypes.string.isRequired,
             time: PropTypes.number
         };
 
