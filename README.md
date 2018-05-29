@@ -56,6 +56,8 @@ setTimeout(() => {
 
 The `<SemanticToastContainer>` receives an optional `position` prop, which can be one of `top-right`, `top-center`, `top-left`, `bottom-right`, `bottom-center` or `bottom-left`.
 
+The type of animation can be specifed using an optional `animation` prop. If not present, will be derived from the container position.
+
 ```jsx
 <SemanticToastContainer position="top-right" />
 ```
