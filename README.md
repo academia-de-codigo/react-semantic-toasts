@@ -7,7 +7,7 @@ Simple and easy Semantic UI animated toast notifications for React
 ## Installation
 
 ```bash
-$ npm install --save react-semantic-toasts
+$ npm install --save react-semantic-toasts semantic-ui-react semantic-ui-css
 ```
 
 ## Usage
