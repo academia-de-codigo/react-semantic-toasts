@@ -20,11 +20,8 @@ function SemanticToast(props) {
 
     return (
         <Message
+            {...{ [type]: true }}
             onDismiss={onClose}
-            info={type === 'info'}
-            success={type === 'success'}
-            error={type === 'error'}
-            warning={type === 'warning'}
             header={title}
             content={description}
             icon={icon}
