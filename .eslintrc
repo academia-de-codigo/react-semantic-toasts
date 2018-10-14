@@ -1,0 +1,74 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-param-reassign": "error",
+    "semi": 2,
+    "sort-imports": [
+      2,
+      {
+        "ignoreCase": true,
+        "memberSyntaxSortOrder": ["single", "multiple", "all", "none"]
+      }
+    ],
+    "max-len": 0,
+    "prefer-destructuring": 0,
+    "arrow-parens": 0,
+    "import/newline-after-import": 0,
+    "no-prototype-builtins": 0,
+    "lines-around-directive": 0,
+    "no-unsafe-negation": 0,
+    "import/first": 0,
+    "import/order": 0,
+    "import/no-unresolved": 0,
+    "import/no-webpack-loader-syntax": 0,
+    "prefer-spread": 0,
+    "no-underscore-dangle": 0,
+    "no-template-curly-in-string": 0,
+    "class-methods-use-this": 0,
+    "no-confusing-arrow": 0,
+    "no-mixed-operators": 0,
+    "no-undef-init": 0,
+    "no-plusplus": 0,
+    "linebreak-style": 0,
+    "import/prefer-default-export": 0,
+    "no-useless-escape": 0,
+    "no-loop-func": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0,
+    "no-lonely-if": 0,
+    "comma-dangle": 0,
+    "no-extra-boolean-cast": 0,
+    "no-multi-assign": 0,
+    "newline-per-chained-call": 0,
+    "block-spacing": 0,
+    "object-property-newline": 0,
+    "no-useless-rename": 0,
+    "no-restricted-syntax": 0,
+    "no-useless-return": 0,
+    "no-continue": 0,
+    "no-console": 0,
+    "function-paren-newline": 0,
+    "object-curly-newline": 0,
+    "arrow-body-style": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 1,
+    "react/sort-comp": 2,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "allowArrowFunctions": true,
+        "allowBind": false
+      }
+    ]
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb/base",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react", "import"]
+}
