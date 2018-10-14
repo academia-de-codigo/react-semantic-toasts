@@ -1,5 +1,6 @@
 .ui-alerts {
     position: fixed;
+    /* width: 360px; */
     z-index: 2060;
     padding: 23px;
 }

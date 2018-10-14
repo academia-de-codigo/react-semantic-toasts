@@ -20,6 +20,3 @@ node_modules/
 
 # OSX
 .DS_Store
-
-# Webstorm directory
-.idea/
