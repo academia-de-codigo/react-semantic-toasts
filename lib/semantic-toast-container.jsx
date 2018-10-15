@@ -26,16 +26,19 @@ class SemanticToastContainer extends Component {
         position: PropTypes.oneOf([
             'top-right',
             'top-center',
+            'top-left',
             'bottom-right',
             'bottom-center',
             'bottom-left'
         ]),
-        animation: PropTypes.string
+        animation: PropTypes.string,
+        className: PropTypes.string
     };
 
     static defaultProps = {
         position: 'top-right',
-        animation: null
+        animation: null,
+        className: ''
     };
 
     state = {
@@ -84,7 +87,8 @@ class SemanticToastContainer extends Component {
                         title = '',
                         description = '',
                         icon = 'announcement',
-                        time
+                        time,
+                        onClick
                     } = toast;
                     return (
                         <SemanticToast
@@ -96,6 +100,7 @@ class SemanticToastContainer extends Component {
                             icon={icon}
                             animation={animation}
                             time={time}
+                            onClick={onClick}
                             onClose={this.onClose}
                         />
                     );
