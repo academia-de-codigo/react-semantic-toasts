@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
 
@@ -7,33 +7,35 @@ import 'semantic-ui-css/components/header.min.css';
 
 import withTransition from './with-transition';
 
-const icons = {
-    info: 'announcement',
-    success: 'checkmark',
-    error: 'remove',
-    warning: 'warning circle'
-};
+class SemanticToast extends PureComponent {
+    icons = {
+        info: 'announcement',
+        success: 'checkmark',
+        error: 'remove',
+        warning: 'warning circle'
+    };
 
-const onDismiss = (e, onClose) => {
-    e.stopPropagation();
-    onClose();
-};
+    onDismiss = (e) => {
+        e.stopPropagation();
+        this.props.onClose();
+    };
 
-function SemanticToast(props) {
-    const { type, title, description, onClick, onClose } = props;
-    const icon = props.icon || icons[props.type];
+    render() {
+        const { type, title, description, onClick } = this.props;
+        const icon = this.props.icon || this.icons[type];
 
-    return (
-        <Message
-            {...{ [type]: true }}
-            onClick={onClick}
-            onDismiss={(e) => onDismiss(e, onClose)}
-            header={title}
-            content={description}
-            icon={icon}
-            floating
-        />
-    );
+        return (
+            <Message
+                {...{ [type]: true }}
+                onClick={onClick}
+                onDismiss={this.onDismiss}
+                header={title}
+                content={description}
+                icon={icon}
+                floating
+            />
+        );
+    }
 }
 
 SemanticToast.propTypes = {
