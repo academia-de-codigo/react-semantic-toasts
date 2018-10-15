@@ -47,7 +47,8 @@ setTimeout(() => {
         title: 'Warning Toast',
         description: 'This is a Semantic UI toast wich waits 5 seconds before closing',
         time: 5000,
-        onClick: () => alert('you click on the toast')
+        onClick: () => alert('you click on the toast'),
+        onClose: () => alert('you close this toast')
     });
 }, 5000);
 ```
