@@ -80,7 +80,8 @@ toast(options, onClick, onClose);
 *   `type` - Can be one of `info`, `success`, `warning`, or `error`
 *   `icon` - Override the default icon
 *   `time` - Duration to keep the toast open, 0 to wait until closed by the user
-*    `onClick` - The function that will be called when you click on the toast
+*   `onClick` - The function that will be called when you click on the toast
+*   `onClose` - The function that will be called when you click `X` on the toast
 
 ## License
 
