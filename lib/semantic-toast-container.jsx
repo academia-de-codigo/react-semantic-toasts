@@ -37,7 +37,8 @@ class SemanticToastContainer extends Component {
 
     static defaultProps = {
         position: 'top-right',
-        animation: null
+        animation: null,
+        className: ''
     };
 
     state = {
