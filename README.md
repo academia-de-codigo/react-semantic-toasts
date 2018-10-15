@@ -35,8 +35,8 @@ setTimeout(() => {
             title: 'Info Toast',
             description: 'This is a Semantic UI toast'
         },
-        () => console.log('toast clicked'),
-        () => console.log('toast closed')
+        () => console.log('toast closed'),
+        () => console.log('toast clicked')
     );
 }, 2000);
 
@@ -67,21 +67,21 @@ The type of animation can be specifed using an optional `animation` prop. If not
 
 ### Toast
 
-The `toast` notification function receives a toast options, a click callback as function arguments and a close callback function as arguments:
+The `toast` notification function receives a toast options object and optional close and click callbacks as function arguments:
 
 ```javascript
-toast(options, onClick, onClose);
+toast(options, onClose, onClick);
 ```
 
 #### Toast Options
 
-*   `title` - The header of the toast
-*   `description` - The content of the toast
-*   `type` - Can be one of `info`, `success`, `warning`, or `error`
-*   `icon` - Override the default icon
-*   `time` - Duration to keep the toast open, 0 to wait until closed by the user
-*   `onClick` - The function that will be called when you click on the toast
-*   `onClose` - The function that will be called when you click `X` on the toast
+-   `title` - The header of the toast
+-   `description` - The content of the toast
+-   `type` - Can be one of `info`, `success`, `warning`, or `error`
+-   `icon` - Override the default icon
+-   `time` - Duration to keep the toast open, 0 to wait until closed by the user
+-   `onClose` - The function that will be called when you click the toast is closed
+-   `onClick` - The function that will be called when you click on the toast
 
 ## License
 
