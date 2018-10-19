@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
+/* eslint:disable import/no-unresolved */
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
+import withTransition from './with-transition';
 
 import 'semantic-ui-css/components/message.min.css';
 import 'semantic-ui-css/components/header.min.css';
-
-import withTransition from './with-transition';
 
 const icons = {
     info: 'announcement',

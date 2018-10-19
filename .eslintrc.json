@@ -19,6 +19,8 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": [2],
         "react/no-did-mount-set-state": "off",
+        "react/destructuring-assignment": "off",
+        "import/no-unresolved": "off",
         "jsx-a11y/anchor-is-valid": [
             "error",
             {
@@ -27,12 +29,5 @@
                 "aspects": ["noHref", "invalidHref", "preferButton"]
             }
         ]
-    },
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "moduleDirectory": ["node_modules", "lib"]
-            }
-        }
     }
 }

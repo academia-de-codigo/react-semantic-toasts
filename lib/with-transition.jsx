@@ -39,11 +39,11 @@ export default function withTransitions(Component) {
         onClose = () => {
             // trigger new animation when toast is dismissed
             this.setState(
-                {
-                    visible: !this.state.visible,
+                prevState => ({
+                    visible: !prevState.visible,
                     animation: this.props.animation,
                     time: CLOSE_TIME
-                },
+                }),
                 () => {
                     setTimeout(() => {
                         if (this.timerId) {

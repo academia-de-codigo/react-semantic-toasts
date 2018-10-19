@@ -86,7 +86,7 @@ class SemanticToastContainer extends Component {
                         type = 'info',
                         title = '',
                         description = '',
-                        icon = 'announcement',
+                        icon,
                         time,
                         onClick
                     } = toast;
