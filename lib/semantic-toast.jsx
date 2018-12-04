@@ -39,14 +39,15 @@ SemanticToast.propTypes = {
     type: PropTypes.oneOf(['info', 'success', 'error', 'warning']).isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired,
+    icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     onClick: PropTypes.func,
     onClose: PropTypes.func
 };
 
 SemanticToast.defaultProps = {
     onClick: undefined,
-    onClose: undefined
+    onClose: undefined,
+    icon: undefined
 };
 
 export default withTransition(SemanticToast);
