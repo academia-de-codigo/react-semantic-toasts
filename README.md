@@ -12,7 +12,18 @@ $ npm install --save react-semantic-toasts semantic-ui-react semantic-ui-css
 
 ## Usage
 
-Import the library into your project using ES6 module syntax
+The library does not depend on `semantic-ui-css` anymore, make sure to import `semantic.min.css' or at the very least, to include the following components:
+
+```javascript
+import 'semantic-ui-css/components/reset.min.css';
+import 'semantic-ui-css/components/site.min.css';
+import 'semantic-ui-css/components/container.min.css';
+import 'semantic-ui-css/components/icon.min.css';
+import 'semantic-ui-css/components/message.min.css';
+import 'semantic-ui-css/components/header.min.css';
+```
+
+Import the library into your project using ES6 module syntax:
 
 ```javascript
 import { SemanticToastContainer, toast } from 'react-semantic-toasts';

@@ -2,8 +2,6 @@ import React from 'react';
 import { Transition } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-import 'semantic-ui-css/components/transition.min.css';
-
 const OPEN_TIME = 500;
 const CLOSE_TIME = 1000;
 

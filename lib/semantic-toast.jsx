@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { Message } from 'semantic-ui-react';
 import withTransition from './with-transition';
 
-import 'semantic-ui-css/components/message.min.css';
-import 'semantic-ui-css/components/header.min.css';
-
 const icons = {
     info: 'announcement',
     success: 'checkmark',
