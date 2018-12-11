@@ -12,7 +12,7 @@ $ npm install --save react-semantic-toasts semantic-ui-react semantic-ui-css
 
 ## Usage
 
-The library does not depend on `semantic-ui-css` anymore, make sure to import `semantic.min.css' or at the very least, to include the following components:
+The library does not depend on `semantic-ui-css` anymore, make sure to import `semantic.min.css` or at the very least, to include the following components:
 
 ```javascript
 import 'semantic-ui-css/components/reset.min.css';
