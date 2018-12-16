@@ -27,6 +27,7 @@ Import the library into your project using ES6 module syntax:
 
 ```javascript
 import { SemanticToastContainer, toast } from 'react-semantic-toasts';
+import 'react-semantic-toasts/styles/react-semantic-alert.css';
 ```
 
 Render the `SemanticToastContainer` component:

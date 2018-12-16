@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/react-semantic-alert.css';
-
 import SemanticToast from './semantic-toast';
 import { store } from './toast';
 
