@@ -21,7 +21,7 @@ export default function withTransitions(Component) {
         state = {
             visible: false,
             time: OPEN_TIME,
-            animation: 'pulse'
+            animation: this.props.animation ? this.props.animation : 'pulse'
         };
 
         componentDidMount() {
