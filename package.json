@@ -28,23 +28,22 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-eslint": "^10.0.1",
-        "babel-plugin-module-resolver": "^3.1.1",
+        "babel-plugin-module-resolver": "^3.2.0",
         "babel-plugin-transform-async-to-generator": "^6.24.1",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
-        "eslint": "^5.10.0",
+        "eslint": "^5.14.1",
         "eslint-config-airbnb": "^17.1.0",
-        "eslint-config-prettier": "^3.3.0",
-        "eslint-plugin-import": "^2.14.0",
-        "eslint-plugin-jsx-a11y": "^6.1.2",
-        "eslint-plugin-react": "^7.11.1",
-        "prop-types": "^15.6.2",
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4",
         "semantic-ui-css": "^2.4.1"
     },
     "dependencies": {
-        "prop-types": "^15.6.2"
+        "prop-types": "^15.7.2"
     },
     "peerDependencies": {
         "react": "^15.0.0-0 || 15.x.x || ^16.0.0-0 || 16.x.x",
