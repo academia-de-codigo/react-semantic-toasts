@@ -35,7 +35,7 @@ function SemanticToast(props) {
 SemanticToast.propTypes = {
     type: PropTypes.oneOf(['info', 'success', 'error', 'warning']).isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     onClick: PropTypes.func,
     onClose: PropTypes.func

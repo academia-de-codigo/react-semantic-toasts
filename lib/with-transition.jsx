@@ -10,7 +10,8 @@ export default function withTransitions(Component) {
         static propTypes = {
             toastId: PropTypes.number.isRequired,
             onClose: PropTypes.func.isRequired,
-            animation: PropTypes.string.isRequired,
+            openAnimation: PropTypes.string.isRequired,
+            closeAnimation: PropTypes.string.isRequired,
             time: PropTypes.number
         };
 
@@ -21,7 +22,7 @@ export default function withTransitions(Component) {
         state = {
             visible: false,
             time: OPEN_TIME,
-            animation: 'pulse'
+            animation: this.props.openAnimation
         };
 
         componentDidMount() {
@@ -39,7 +40,7 @@ export default function withTransitions(Component) {
             this.setState(
                 prevState => ({
                     visible: !prevState.visible,
-                    animation: this.props.animation,
+                    animation: this.props.closeAnimation,
                     time: CLOSE_TIME
                 }),
                 () => {

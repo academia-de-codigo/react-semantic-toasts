@@ -5,7 +5,7 @@ import SemanticToast from './semantic-toast';
 import { store } from './toast';
 
 /* eslint-disable no-useless-computed-key */
-const animations = {
+const closeAnimations = {
     ['top-right']: 'fly left',
     ['top-center']: 'fly down',
     ['top-left']: 'fly right',
@@ -68,8 +68,7 @@ class SemanticToastContainer extends Component {
     };
 
     render() {
-        const { position, className } = this.props;
-        const animation = this.props.animation || animations[position];
+        const { animation: containerAnimation, position, className } = this.props;
 
         return (
             <div className={`ui-alerts ${position} ${className}`}>
@@ -81,7 +80,8 @@ class SemanticToastContainer extends Component {
                         description = '',
                         icon,
                         time,
-                        onClick
+                        onClick,
+                        animation
                     } = toast;
                     return (
                         <SemanticToast
@@ -91,7 +91,8 @@ class SemanticToastContainer extends Component {
                             title={title}
                             description={description}
                             icon={icon}
-                            animation={animation}
+                            openAnimation={animation || containerAnimation || 'pulse'}
+                            closeAnimation={closeAnimations[position]}
                             time={time}
                             onClick={onClick}
                             onClose={this.onClose}

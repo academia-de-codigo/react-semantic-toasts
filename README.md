@@ -45,12 +45,12 @@ setTimeout(() => {
     toast(
         {
             title: 'Info Toast',
-            description: 'This is a Semantic UI toast'
+            description: <p>This is a Semantic UI toast</p>
         },
         () => console.log('toast closed'),
         () => console.log('toast clicked')
     );
-}, 2000);
+}, 1000);
 
 setTimeout(() => {
     toast({
@@ -58,6 +58,7 @@ setTimeout(() => {
         icon: 'envelope',
         title: 'Warning Toast',
         description: 'This is a Semantic UI toast wich waits 5 seconds before closing',
+        animation: 'bounce',
         time: 5000,
         onClick: () => alert('you click on the toast'),
         onClose: () => alert('you close this toast')
@@ -71,7 +72,7 @@ setTimeout(() => {
 
 The `<SemanticToastContainer>` receives an optional `position` prop, which can be one of `top-right`, `top-center`, `top-left`, `bottom-right`, `bottom-center` or `bottom-left`.
 
-The type of animation can be specifed using an optional `animation` prop. If not present, will be derived from the container position.
+The type of animation can be specifed using an optional `animation` prop with any supported [SemanticUI animation](https://semantic-ui.com/modules/transition.html) value. If not present, will be derived from the container position.
 
 ```jsx
 <SemanticToastContainer position="top-right" />
@@ -94,6 +95,7 @@ toast(options, onClose, onClick);
 -   `time` - Duration to keep the toast open, 0 to wait until closed by the user
 -   `onClose` - The function that will be called when you click the toast is closed
 -   `onClick` - The function that will be called when you click on the toast
+-   `animation` - Override the default toast container animation
 
 ## License
 
