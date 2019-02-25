@@ -47,6 +47,6 @@
     },
     "peerDependencies": {
         "react": "^15.0.0-0 || 15.x.x || ^16.0.0-0 || 16.x.x",
-        "semantic-ui-react": "0.82.x || 0.83.x || 0.84.x"
+        "semantic-ui-react": "0.83.x || 0.84.x || 0.85.x"
     }
 }
