@@ -82,6 +82,7 @@ class SemanticToastContainer extends Component {
                         time,
                         size,
                         color,
+	                      list,
                         onClick,
                         animation
                     } = toast;
@@ -95,6 +96,7 @@ class SemanticToastContainer extends Component {
                             icon={icon}
                             size={size}
                             color={color}
+                            list={list}
                             openAnimation={animation || containerAnimation || 'pulse'}
                             closeAnimation={closeAnimations[position]}
                             time={time}

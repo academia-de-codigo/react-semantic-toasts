@@ -11,7 +11,7 @@ const icons = {
 };
 
 function SemanticToast(props) {
-    const { type, title, description, size, color, onClose, onClick } = props;
+    const { type, title, description, size, color, list, onClose, onClick } = props;
     const icon = props.icon || icons[type];
 
     const onDismiss = e => {
@@ -29,6 +29,7 @@ function SemanticToast(props) {
             icon={icon}
             size={size}
             color={color}
+            list={list}
             floating
         />
     );
@@ -45,6 +46,7 @@ SemanticToast.propTypes = {
     icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     size: PropTypes.string,
     color: PropTypes.string,
+		list: PropTypes.array,
     onClick: PropTypes.func,
     onClose: PropTypes.func
 };
