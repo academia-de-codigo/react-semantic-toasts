@@ -46,7 +46,7 @@ SemanticToast.propTypes = {
     icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     size: PropTypes.string,
     color: PropTypes.string,
-		list: PropTypes.array,
+	list: PropTypes.array,
     onClick: PropTypes.func,
     onClose: PropTypes.func
 };
