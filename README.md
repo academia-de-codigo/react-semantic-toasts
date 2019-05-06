@@ -94,7 +94,7 @@ toast(options, onClose, onClick);
 -   `icon` - Override the default icon
 -   `color` - Override color with [semantic values](https://react.semantic-ui.com/collections/message/#variations-color)
 -   `size` - Size of toast with [semantic values](https://react.semantic-ui.com/collections/message/#variations-size)
--   `list` - List of string for show item menu in toast
+-   `list` - Array of strings for showing an item menu inside the toast
 -   `time` - Duration to keep the toast open, 0 to wait until closed by the user
 -   `onClose` - The function that will be called when you click the toast is closed
 -   `onClick` - The function that will be called when you click on the toast
