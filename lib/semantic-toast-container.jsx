@@ -82,7 +82,7 @@ class SemanticToastContainer extends Component {
                         time,
                         size,
                         color,
-	                      list,
+	                    list,
                         onClick,
                         animation
                     } = toast;
