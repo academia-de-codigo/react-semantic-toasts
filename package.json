@@ -27,26 +27,27 @@
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
-        "babel-eslint": "^10.0.1",
+        "babel-eslint": "^10.0.2",
         "babel-plugin-module-resolver": "^3.2.0",
         "babel-plugin-transform-async-to-generator": "^6.24.1",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
-        "eslint": "^5.16.0",
+        "eslint": "^6.0.1",
         "eslint-config-airbnb": "^17.1.0",
-        "eslint-config-prettier": "^4.2.0",
-        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-import": "^2.18.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4",
+        "eslint-plugin-react": "^7.14.2",
         "semantic-ui-css": "^2.4.1"
     },
     "dependencies": {
+        "eslint-config-prettier": "^6.0.0",
+        "prettier-eslint": "^9.0.0",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
-        "react": "^15.0.0-0 || 15.x.x || ^16.0.0-0 || 16.x.x",
-        "semantic-ui-react": "0.83.x || 0.84.x || 0.85.x"
+        "react": "15.x.x || 16.x.x",
+        "semantic-ui-react": "0.83.x || 0.84.x || 0.85.x || 0.86x || 0.87x"
     }
 }
