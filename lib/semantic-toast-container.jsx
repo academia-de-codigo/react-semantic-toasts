@@ -69,8 +69,9 @@ class SemanticToastContainer extends Component {
 
     render() {
         const { animation: containerAnimation, position, className } = this.props;
+        const { toasts } = this.state;
 
-        return (
+        return toasts.length ? (
             <div className={`ui-alerts ${position} ${className}`}>
                 {this.state.toasts.map(toast => {
                     const {
@@ -106,7 +107,7 @@ class SemanticToastContainer extends Component {
                     );
                 })}
             </div>
-        );
+        ) : null;
     }
 }
 
