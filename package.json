@@ -13,7 +13,7 @@
     "scripts": {
         "build": "babel lib -d build",
         "build:watch": "babel lib -w -d build",
-        "eslint": "eslint lib/**",
+        "eslint": "eslint lib/**/*.js",
         "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
         "prepack": "copyfiles -u 1 lib/index.d.ts build",
         "test": "echo \"Error: no test specified\" && exit 1"
