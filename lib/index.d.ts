@@ -5,7 +5,18 @@ declare module 'react-semantic-toasts' {
         'fly left' | 'fly right' | 'fly down' | 'fly up' | 'swing left' | 'swing right' | 'swing up' | 'swing down' | 'browse' | 'browse right' | 'slide down' |
         'slide up' | 'slide left' | 'slide right' | 'jiggle' | 'flash' | 'shake' | 'pulse' | 'tada' | 'bounce' | 'glow'
     type ToastType = 'info' | 'success' | 'warning' | 'error'
-    type SemanticMessageSize = 'mini' | 'tiny' | 'small' | 'large' | 'big' | 'huge' | 'massive'
+    type SemanticMessageSize = 'mini' | 'tiny' | 'small' | 'medium' | 'large' | 'big' | 'huge' | 'massive'
+
+    interface ToastOptions {
+        title: string
+        description?: string
+        type?: ToastType
+        icon?: SemanticICONS
+        time?: number
+        animation?: SemanticAnimation
+        size?: ToastSize
+        color?: ToastColor
+    }
 
     const SemanticToastContainer: (
         props: {
@@ -16,19 +27,10 @@ declare module 'react-semantic-toasts' {
     ) => JSX.Element
 
     const toast: (
-        options: {
-            type: ToastType
-            title: string
-            description: string | string[] | React.ReactNode
-            icon?: SemanticICONS
-            size?: SemanticMessageSize
-            color?: string
-            animation?: SemanticAnimation
-            time?: number
-        },
+        options: ToastOptions,
         onClose?: () => void,
         onClick?: () => void
     ) => void
 
-    export { SemanticToastContainer, toast }
+    export { SemanticToastContainer, toast, ToastOptions }
 };
