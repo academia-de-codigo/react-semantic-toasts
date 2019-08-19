@@ -1,11 +1,10 @@
 declare module 'react-semantic-toasts' {
-    import { SemanticICONS } from 'semantic-ui-react'
+    import { SemanticICONS, SemanticSIZES, SemanticCOLORS } from 'semantic-ui-react'
     type ContainerPosition = 'top-right' | 'top-center' | 'top-left' | 'bottom-right' | 'bottom-center' | 'bottom-left'
     type SemanticAnimation = 'scale' | 'zoom' | 'fade' | 'fade up' | 'fade down' | 'fade left' | 'fade right' | 'horizontal flip' | 'vertical flip' | 'drop' |
         'fly left' | 'fly right' | 'fly down' | 'fly up' | 'swing left' | 'swing right' | 'swing up' | 'swing down' | 'browse' | 'browse right' | 'slide down' |
         'slide up' | 'slide left' | 'slide right' | 'jiggle' | 'flash' | 'shake' | 'pulse' | 'tada' | 'bounce' | 'glow'
     type ToastType = 'info' | 'success' | 'warning' | 'error'
-    type SemanticMessageSize = 'mini' | 'tiny' | 'small' | 'medium' | 'large' | 'big' | 'huge' | 'massive'
 
     interface ToastOptions {
         title: string
@@ -14,8 +13,8 @@ declare module 'react-semantic-toasts' {
         icon?: SemanticICONS
         time?: number
         animation?: SemanticAnimation
-        size?: ToastSize
-        color?: ToastColor
+        size?: SemanticSIZES
+        color?: SemanticCOLORS
     }
 
     const SemanticToastContainer: (
