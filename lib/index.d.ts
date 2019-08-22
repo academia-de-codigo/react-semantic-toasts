@@ -32,4 +32,4 @@ declare module 'react-semantic-toasts' {
     ) => void
 
     export { SemanticToastContainer, toast, ToastOptions }
-};
+}
