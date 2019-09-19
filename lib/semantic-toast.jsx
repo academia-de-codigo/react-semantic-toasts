@@ -16,6 +16,7 @@ function SemanticToast(props) {
 
     const onDismiss = e => {
         e.stopPropagation();
+        props.onDismiss();
         onClose();
     };
 
@@ -48,11 +49,13 @@ SemanticToast.propTypes = {
     color: PropTypes.string,
     list: PropTypes.arrayOf(PropTypes.string),
     onClick: PropTypes.func,
+    onDismiss: PropTypes.func,
     onClose: PropTypes.func
 };
 
 SemanticToast.defaultProps = {
     onClick: undefined,
+    onDismiss: undefined,
     onClose: undefined,
     icon: undefined,
     color: undefined,

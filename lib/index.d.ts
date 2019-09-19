@@ -28,7 +28,8 @@ declare module 'react-semantic-toasts' {
     const toast: (
         options: ToastOptions,
         onClose?: () => void,
-        onClick?: () => void
+        onClick?: () => void,
+        onDismiss?: () => void,
     ) => void
 
     export { SemanticToastContainer, toast, ToastOptions }
