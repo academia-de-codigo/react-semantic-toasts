@@ -1,6 +1,6 @@
 {
     "name": "react-semantic-toasts",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "description": "React Semantic UI alerts library",
     "main": "build/index.js",
     "types": "build/index.d.ts",
