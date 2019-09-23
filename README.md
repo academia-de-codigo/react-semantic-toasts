@@ -48,7 +48,8 @@ setTimeout(() => {
             description: <p>This is a Semantic UI toast</p>
         },
         () => console.log('toast closed'),
-        () => console.log('toast clicked')
+        () => console.log('toast clicked'),
+        () => console.log('toast dismissed')
     );
 }, 1000);
 
@@ -60,8 +61,9 @@ setTimeout(() => {
         description: 'This is a Semantic UI toast wich waits 5 seconds before closing',
         animation: 'bounce',
         time: 5000,
+        onClose: () => alert('you close this toast'),
         onClick: () => alert('you click on the toast'),
-        onClose: () => alert('you close this toast')
+        onDismiss: () => alert('you have dismissed this toast')
     });
 }, 5000);
 ```
@@ -80,10 +82,10 @@ The type of animation can be specifed using an optional `animation` prop with an
 
 ### Toast
 
-The `toast` notification function receives a toast options object and optional close and click callbacks as function arguments:
+The `toast` notification function receives a toast options object and optional close, click and dismiss callbacks as function arguments:
 
 ```javascript
-toast(options, onClose, onClick);
+toast(options, onClose, onClick, onDismiss);
 ```
 
 #### Toast Options
@@ -96,8 +98,9 @@ toast(options, onClose, onClick);
 -   `size` - Size of toast with [semantic values](https://react.semantic-ui.com/collections/message/#variations-size)
 -   `list` - Array of strings for showing an item menu inside the toast
 -   `time` - Duration to keep the toast open, 0 to wait until closed by the user
--   `onClose` - The function that will be called when you click the toast is closed
+-   `onClose` - The function that will be called when the toast is closed (either if you have clicked the close sign or if the toast has been closed after `time` has passed)
 -   `onClick` - The function that will be called when you click on the toast
+-   `onDismiss` - The function that will be called when you click to close the toast. onClose function will be called afterwards. 
 -   `animation` - Override the default toast container animation
 
 ## License

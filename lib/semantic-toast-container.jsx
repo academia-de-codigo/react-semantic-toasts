@@ -85,6 +85,7 @@ class SemanticToastContainer extends Component {
                         color,
                         list,
                         onClick,
+                        onDismiss,
                         animation
                     } = toast;
                     return (
@@ -103,6 +104,7 @@ class SemanticToastContainer extends Component {
                             time={time}
                             onClick={onClick}
                             onClose={this.onClose}
+                            onDismiss={onDismiss}
                         />
                     );
                 })}

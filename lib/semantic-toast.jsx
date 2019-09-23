@@ -11,11 +11,12 @@ const icons = {
 };
 
 function SemanticToast(props) {
-    const { type, title, description, size, color, list, onClose, onClick } = props;
+    const { type, title, description, size, color, list, onClose, onClick, onDismiss } = props;
     const icon = props.icon || icons[type];
 
-    const onDismiss = e => {
+    const onDispel = e => {
         e.stopPropagation();
+        onDismiss();
         onClose();
     };
 
@@ -23,7 +24,7 @@ function SemanticToast(props) {
         <Message
             {...{ [type]: true }}
             onClick={onClick}
-            onDismiss={onDismiss}
+            onDismiss={onDispel}
             header={title}
             content={description}
             icon={icon}
@@ -48,11 +49,13 @@ SemanticToast.propTypes = {
     color: PropTypes.string,
     list: PropTypes.arrayOf(PropTypes.string),
     onClick: PropTypes.func,
+    onDismiss: PropTypes.func,
     onClose: PropTypes.func
 };
 
 SemanticToast.defaultProps = {
     onClick: undefined,
+    onDismiss: undefined,
     onClose: undefined,
     icon: undefined,
     color: undefined,
