@@ -73,7 +73,7 @@ class SemanticToastContainer extends Component {
 
         return toasts.length ? (
             <div className={`ui-alerts ${position} ${className}`}>
-                {this.state.toasts.map(toast => {
+                {toasts.map(toast => {
                     const {
                         id,
                         type = 'info',
