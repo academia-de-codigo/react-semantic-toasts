@@ -31,6 +31,7 @@ function SemanticToast(props) {
             size={size}
             color={color}
             list={list}
+            style={onClick !== undefined ? { cursor: 'pointer' } : {}}
             floating
         />
     );
@@ -54,7 +55,7 @@ SemanticToast.propTypes = {
 };
 
 SemanticToast.defaultProps = {
-    onClick: () => undefined,
+    onClick: undefined,
     onDismiss: () => undefined,
     onClose: () => undefined,
     icon: undefined,
