@@ -61,7 +61,7 @@ SemanticToast.defaultProps = {
     icon: undefined,
     color: undefined,
     list: undefined,
-    size: 'medium'
+    size: undefined
 };
 
 export default withTransition(SemanticToast);
