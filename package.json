@@ -43,11 +43,11 @@
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-react": "^7.14.3",
+        "eslint-config-prettier": "^6.0.0",
+        "prettier-eslint": "^9.0.0",
         "semantic-ui-css": "^2.4.1"
     },
     "dependencies": {
-        "eslint-config-prettier": "^6.0.0",
-        "prettier-eslint": "^9.0.0",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
