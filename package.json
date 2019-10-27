@@ -43,15 +43,15 @@
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-react": "^7.14.3",
+        "eslint-config-prettier": "^6.0.0",
+        "prettier-eslint": "^9.0.0",
         "semantic-ui-css": "^2.4.1"
     },
     "dependencies": {
-        "eslint-config-prettier": "^6.0.0",
-        "prettier-eslint": "^9.0.0",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
         "react": "16.x.x",
-        "semantic-ui-react": "0.83.x || 0.84.x || 0.85.x || 0.86.x || 0.87.x"
+        "semantic-ui-react": "0.83.x || 0.84.x || 0.85.x || 0.86.x || 0.87.x || 0.88.x"
     }
 }
