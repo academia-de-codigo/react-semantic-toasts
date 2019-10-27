@@ -54,9 +54,9 @@ SemanticToast.propTypes = {
 };
 
 SemanticToast.defaultProps = {
-    onClick: undefined,
-    onDismiss: undefined,
-    onClose: undefined,
+    onClick: () => undefined,
+    onDismiss: () => undefined,
+    onClose: () => undefined,
     icon: undefined,
     color: undefined,
     list: undefined,
