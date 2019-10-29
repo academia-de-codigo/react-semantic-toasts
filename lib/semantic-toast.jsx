@@ -10,9 +10,19 @@ const icons = {
     warning: 'warning circle'
 };
 
-function SemanticToast(props) {
-    const { type, title, description, size, color, list, onClose, onClick, onDismiss } = props;
-    const icon = props.icon || icons[type];
+function SemanticToast({
+    type,
+    title,
+    description,
+    size,
+    color,
+    list,
+    onClose,
+    onClick,
+    onDismiss,
+    ...props
+}) {
+    const computedIcon = props.icon || icons[type];
 
     const onDispel = e => {
         e.stopPropagation();
@@ -27,11 +37,12 @@ function SemanticToast(props) {
             onDismiss={onDispel}
             header={title}
             content={description}
-            icon={icon}
+            icon={computedIcon}
             size={size}
             color={color}
             list={list}
             floating
+            {...props}
         />
     );
 }
@@ -54,7 +65,7 @@ SemanticToast.propTypes = {
 };
 
 SemanticToast.defaultProps = {
-    onClick: () => undefined,
+    onClick: undefined,
     onDismiss: () => undefined,
     onClose: () => undefined,
     icon: undefined,
