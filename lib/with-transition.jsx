@@ -60,11 +60,17 @@ export default function withTransitions(Component) {
             const styles = {
                 marginBottom: '1em'
             };
+            const props = {...this.props};
+            delete props.toastId;
+            delete props.onClose;
+            delete props.openAnimation;
+            delete props.closeAnimation;
+            delete props.time;
 
             return (
                 <Transition animation={animation} duration={time} visible={visible}>
                     <div style={styles} role="presentation">
-                        <Component {...this.props} onClose={this.onClose} />
+                        <Component {...props} onClose={this.onClose} />
                     </div>
                 </Transition>
             );
