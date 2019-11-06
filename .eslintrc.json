@@ -15,12 +15,15 @@
         "node": true
     },
     "rules": {
+        "import/no-unresolved": "off",
         "no-prototype-builtins": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-props-no-spreading": "off",
         "react/prop-types": [2],
         "react/no-did-mount-set-state": "off",
         "react/destructuring-assignment": "off",
-        "import/no-unresolved": "off",
+        "react/static-property-placement": "off",
+        "react/state-in-constructor": "off",
         "jsx-a11y/anchor-is-valid": [
             "error",
             {

@@ -48,7 +48,7 @@ SemanticToast.propTypes = {
 SemanticToast.defaultProps = {
     onDismiss: () => undefined,
     onClose: () => undefined,
-    icon: undefined,
+    icon: undefined
 };
 
 export default withTransition(SemanticToast);
