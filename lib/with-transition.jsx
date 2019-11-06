@@ -56,6 +56,7 @@ export default function withTransitions(Component) {
         };
 
         render() {
+            const { toastId, openAnimation, closeAnimation, time: timeProp, onClose, ...props } = this.props;
             const { time, visible, animation } = this.state;
             const styles = {
                 marginBottom: '1em'
@@ -64,7 +65,7 @@ export default function withTransitions(Component) {
             return (
                 <Transition animation={animation} duration={time} visible={visible}>
                     <div style={styles} role="presentation">
-                        <Component {...this.props} onClose={this.onClose} />
+                        <Component {...props} onClose={this.onClose} />
                     </div>
                 </Transition>
             );
