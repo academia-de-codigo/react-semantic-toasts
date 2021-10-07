@@ -25,7 +25,8 @@ class SemanticToastContainer extends Component {
             'bottom-left'
         ]),
         animation: PropTypes.string,
-        className: PropTypes.string
+        className: PropTypes.string,
+        maxToasts: PropTypes.number,
     };
 
     static defaultProps = {
@@ -62,8 +63,15 @@ class SemanticToastContainer extends Component {
     };
 
     updateToasts = () => {
+        // Add the new toast data to state.
         this.setState({
             toasts: store.data
+        }, ()=> {
+          // If we're above the limit after adding a new toast.
+          if (store.data.length > this.props.maxToasts) {
+              // Close the oldest toast.
+              this.onClose(this.state.toasts[this.state.toasts.length - 1].id);
+          }
         });
     };
 
