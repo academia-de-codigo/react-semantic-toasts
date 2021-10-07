@@ -70,7 +70,7 @@ class SemanticToastContainer extends Component {
           // If we're above the limit after adding a new toast.
           if (store.data.length > this.props.maxToasts) {
               // Close the oldest toast.
-              this.onClose(this.state.toasts[this.state.toasts.length - 1].id);
+              this.onClose(this.state.toasts[0].id);
           }
         });
     };
