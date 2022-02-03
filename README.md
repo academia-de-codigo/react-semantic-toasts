@@ -80,6 +80,16 @@ The type of animation can be specifed using an optional `animation` prop with an
 <SemanticToastContainer position="top-right" />
 ```
 
+#### Max Toasts
+
+Supply the `maxToasts` prop to `<SemanticToastContainer>` to control the amount of toasts visible at any given time.
+
+- `maxToasts` - The amount of toasts to display at once. On new toasts, the toaster will dismiss the oldest toast to say within the limit.
+
+```jsx
+<SemanticToastContainer position="top-right" maxToasts={3}/>
+```
+
 ### Toast
 
 The `toast` notification function receives a toast options object and optional close, click and dismiss callbacks as function arguments:
@@ -100,7 +110,7 @@ toast(options, onClose, onClick, onDismiss);
 -   `time` - Duration to keep the toast open, 0 to wait until closed by the user
 -   `onClose` - The function that will be called when the toast is closed (either if you have clicked the close sign or if the toast has been closed after `time` has passed)
 -   `onClick` - The function that will be called when you click on the toast
--   `onDismiss` - The function that will be called when you click to close the toast. onClose function will be called afterwards. 
+-   `onDismiss` - The function that will be called when you click to close the toast. onClose function will be called afterwards.
 -   `animation` - Override the default toast container animation
 
 ## License

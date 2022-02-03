@@ -22,6 +22,7 @@ declare module 'react-semantic-toasts' {
             position?: ContainerPosition
             animation?: SemanticAnimation
             className?: string
+            maxToasts?: number
         }
     ) => JSX.Element
 
