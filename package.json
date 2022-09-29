@@ -48,7 +48,7 @@
         "semantic-ui-css": "^2.4.1"
     },
     "peerDependencies": {
-        "react": "16.x.x || 17.x.x",
+        "react": "16.x.x || 17.x.x || 18.x.x",
         "prop-types": "^15.7.2",
         "semantic-ui-react": "*"
     },
