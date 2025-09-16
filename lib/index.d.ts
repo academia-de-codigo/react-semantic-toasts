@@ -1,4 +1,5 @@
 declare module 'react-semantic-toasts' {
+    import {ReactNode} from "react";
     import { SemanticICONS, SemanticSIZES, SemanticCOLORS } from 'semantic-ui-react'
     type ContainerPosition = 'top-right' | 'top-center' | 'top-left' | 'bottom-right' | 'bottom-center' | 'bottom-left'
     type SemanticAnimation = 'scale' | 'zoom' | 'fade' | 'fade up' | 'fade down' | 'fade left' | 'fade right' | 'horizontal flip' | 'vertical flip' | 'drop' |
@@ -8,7 +9,7 @@ declare module 'react-semantic-toasts' {
 
     interface ToastOptions {
         title: string
-        description?: string
+        description?: string | ReactNode
         type?: ToastType
         icon?: SemanticICONS
         time?: number
